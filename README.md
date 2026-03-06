@@ -85,8 +85,52 @@ yarn start
 └── README.md
 ```
 
-## Deployment
-For production deployment (e.g., Vercel + Railway/Render):
-- Deploy `frontend/` to Vercel (set `REACT_APP_BACKEND_URL` env var)
-- Deploy `backend/` to Railway/Render (set `MONGO_URL`, `DB_NAME`, `ADMIN_PASSWORD`)
-- Use MongoDB Atlas for a cloud database
+## Deployment (Free Hosting)
+
+### Step 1: Database — MongoDB Atlas (Free)
+1. Go to [mongodb.com/atlas](https://mongodb.com/atlas) → Create a free account
+2. Create a **free shared cluster**
+3. Under **Database Access**, create a user with a password
+4. Under **Network Access**, add `0.0.0.0/0` (allow all IPs)
+5. Click **Connect** → **Drivers** → Copy the connection string
+   - It looks like: `mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/blog_platform`
+
+### Step 2: Backend — Render (Free)
+1. Go to [render.com](https://render.com) → Sign up with GitHub
+2. Click **New → Web Service** → Connect your GitHub repo
+3. Configure:
+   - **Root Directory**: `backend`
+   - **Runtime**: Python
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `uvicorn server:app --host 0.0.0.0 --port $PORT`
+4. Add **Environment Variables**:
+   | Key | Value |
+   |-----|-------|
+   | `MONGO_URL` | Your MongoDB Atlas connection string |
+   | `DB_NAME` | `blog_platform` |
+   | `ADMIN_PASSWORD` | Your secure admin password |
+   | `CORS_ORIGINS` | `https://your-app.vercel.app` (set after Vercel deploy) |
+5. Click **Deploy** → Copy your backend URL (e.g. `https://blog-backend-xxxx.onrender.com`)
+
+### Step 3: Frontend — Vercel (Free)
+1. Go to [vercel.com](https://vercel.com) → Sign up with GitHub
+2. Click **Add New → Project** → Import your GitHub repo
+3. Configure:
+   - **Framework Preset**: Create React App
+   - **Root Directory**: `frontend`
+4. Add **Environment Variable**:
+   | Key | Value |
+   |-----|-------|
+   | `REACT_APP_BACKEND_URL` | Your Render backend URL (from Step 2) |
+5. Click **Deploy**
+
+### Step 4: Update CORS
+Go back to Render → your backend service → Environment → Update `CORS_ORIGINS` with your Vercel frontend URL.
+
+---
+
+### Deployment Config Files Included
+- `render.yaml` — Render backend auto-config
+- `frontend/vercel.json` — Vercel frontend routing config
+- `backend/.env.example` — Template for backend env vars
+- `frontend/.env.example` — Template for frontend env vars
