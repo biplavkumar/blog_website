@@ -1,0 +1,125 @@
+{
+  "brand_identity": {
+    "name": "E1_Blog_Platform",
+    "persona": "The Anti-AI Designer",
+    "tone": "Editorial, Sophisticated, High-Contrast, Immersive",
+    "description": "A blog platform that rejects the generic 'bootstrap' look. It combines the layout precision of a Swiss magazine with the dark, immersive atmosphere of a developer's IDE.",
+    "theme_mode": "dark"
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Playfair Display, serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]",
+      "h2": "text-3xl md:text-5xl font-semibold tracking-tight leading-tight",
+      "h3": "text-2xl md:text-3xl font-medium tracking-normal",
+      "body_lg": "text-lg md:text-xl leading-relaxed text-muted-foreground",
+      "body_base": "text-base leading-relaxed text-muted-foreground",
+      "caption": "text-xs uppercase tracking-widest font-mono text-muted-foreground/70"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#02040a",
+      "foreground": "#fafafa",
+      "card": "#09090b",
+      "card_foreground": "#fafafa",
+      "popover": "#09090b",
+      "popover_foreground": "#fafafa",
+      "primary": "#fafafa",
+      "primary_foreground": "#09090b",
+      "secondary": "#27272a",
+      "secondary_foreground": "#fafafa",
+      "muted": "#27272a",
+      "muted_foreground": "#a1a1aa",
+      "accent": "#27272a",
+      "accent_foreground": "#fafafa",
+      "destructive": "#7f1d1d",
+      "destructive_foreground": "#fafafa",
+      "border": "#27272a",
+      "input": "#27272a",
+      "ring": "#a1a1aa",
+      "brand_accent": "#a855f7"
+    },
+    "chart": {
+      "1": "#3b82f6",
+      "2": "#10b981",
+      "3": "#f59e0b",
+      "4": "#ef4444",
+      "5": "#8b5cf6"
+    }
+  },
+  "layout": {
+    "spacing_scale": {
+      "section_gap": "gap-24 md:gap-32",
+      "element_gap": "gap-6 md:gap-8",
+      "container_padding": "p-6 md:p-12 lg:p-20"
+    },
+    "grid_systems": {
+      "public_blog": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8",
+      "admin_dashboard": "grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6"
+    },
+    "max_width": "max-w-7xl mx-auto"
+  },
+  "components": {
+    "buttons": {
+      "default": "rounded-none font-mono uppercase tracking-widest text-xs h-12 px-8 transition-all duration-300 hover:bg-foreground hover:text-background border border-border",
+      "primary": "bg-foreground text-background hover:bg-white/90 rounded-none font-medium",
+      "ghost": "hover:bg-accent hover:text-accent-foreground"
+    },
+    "cards": {
+      "blog_tile": "group relative overflow-hidden bg-card border border-border/40 hover:border-border transition-colors duration-500",
+      "admin_widget": "bg-card/50 backdrop-blur-sm border border-border/50 p-6"
+    },
+    "inputs": {
+      "default": "bg-background border-border/50 focus:border-foreground/50 focus:ring-0 rounded-none h-12"
+    },
+    "images": {
+      "aspect_ratio_blog": "aspect-[4/3] object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700 ease-out",
+      "aspect_ratio_hero": "aspect-[21/9] object-cover w-full",
+      "crop_behavior": "object-cover object-center"
+    }
+  },
+  "image_urls": {
+    "blog_covers": [
+      "https://images.unsplash.com/photo-1649527267376-688264efcccf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHw0fHxkYXJrJTIwbWluaW1hbGlzdCUyMGFyY2hpdGVjdHVyZSUyMGdlb21ldHJpY3xlbnwwfHx8fDE3NzI3Njc3NzR8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1649182784901-48f5f2d40ecc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbWluaW1hbGlzdCUyMGFyY2hpdGVjdHVyZSUyMGdlb21ldHJpY3xlbnwwfHx8fDE3NzI3Njc3NzR8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1640346876473-f76a73c71539?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwzfHxkYXJrJTIwbWluaW1hbGlzdCUyMGFyY2hpdGVjdHVyZSUyMGdlb21ldHJpY3xlbnwwfHx8fDE3NzI3Njc3NzR8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1649346716613-d92f359d0c2c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwyfHxkYXJrJTIwbWluaW1hbGlzdCUyMGFyY2hpdGVjdHVyZSUyMGdlb21ldHJpY3xlbnwwfHx8fDE3NzI3Njc3NzR8MA&ixlib=rb-4.1.0&q=85"
+    ],
+    "abstract_decorations": [
+      "https://images.unsplash.com/photo-1767642833959-0cac90824996?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwyfHxuZW9uJTIwYWJzdHJhY3QlMjAzZCUyMHNoYXBlcyUyMGRhcmslMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Mjc2Nzc3NXww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1764303017897-16f5009d2bb1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwxfHxuZW9uJTIwYWJzdHJhY3QlMjAzZCUyMHNoYXBlcyUyMGRhcmslMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Mjc2Nzc3NXww&ixlib=rb-4.1.0&q=85"
+    ],
+    "avatars": [
+      "https://images.unsplash.com/photo-1770894807442-108cc33c0a7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGRhcmslMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Mjc2Nzc3NXww&ixlib=rb-4.1.0&q=85"
+    ]
+  },
+  "motion": {
+    "page_transition": "initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}",
+    "hover_scale": "whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}",
+    "stagger_children": "variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.1 } } }}"
+  },
+  "universal_guidelines": [
+    "NEVER use gradients for backgrounds. Use solid, deep colors (Zinc-950) with subtle noise texture if needed.",
+    "Typography is the UI. Use size and weight contrast instead of lines and borders where possible.",
+    "Input fields should look like they belong in a terminal or a high-end form, not a default bootstrap input.",
+    "All images must have a unified aspect ratio in lists (4:3 or 16:9).",
+    "Do not use generic 'Loading...' text. Use skeleton screens or subtle spinners.",
+    "Admin Dashboard: Dense, data-rich, functional. Public Blog: Airy, editorial, emotional.",
+    "Interactive elements must have clear :focus-visible states for accessibility.",
+    "Use 'sonner' for all toast notifications.",
+    "Mobile Responsiveness is paramount. Images must not exceed 80vh on mobile."
+  ],
+  "instructions_to_main_agent": {
+    "frontend_setup": "Update tailwind.config.js to include the specific colors and fonts defined in this JSON. Import Google Fonts in index.css.",
+    "admin_access": "Implement a simple password gate. No complex auth. Store password in env var or hardcode for MVP.",
+    "image_handling": "When uploading images in Admin, convert to Base64 or upload to MongoDB GridFS. Ensure they are displayed with 'object-cover' CSS to maintain uniformity.",
+    "routing": "Use React Router. Public routes: '/', '/blog/:id'. Admin routes: '/admin', '/admin/dashboard', '/admin/create', '/admin/edit/:id'.",
+    "testing": "Add data-testid to all buttons, inputs, and links."
+  }
+}
